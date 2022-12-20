@@ -1,0 +1,12 @@
+node_modules
+dist
+*.ai
+*.log
+*.pdf
+*.psd
+*.sublime*
+**/inline-svg
+node_modules/
+npm-debug.*
+crosscheck/
+Thumbs.db
