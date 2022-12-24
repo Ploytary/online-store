@@ -5,7 +5,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
-
 const ENTRY_POINT = 'index.ts'
 const SOURCE_FOLDER = 'src';
 const BUILD_FOLDER = 'dist';
@@ -84,7 +83,7 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'resolve-url-loader', {loader: 'sass-loader', options: {sourceMap: true,}}]
       },
       {
         test: /\.less$/i,
