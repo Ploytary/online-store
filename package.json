@@ -2,7 +2,7 @@
   "name": "online-storage",
   "version": "1.0.0",
   "description": "",
-  "main": "webpack.config.js",
+  "private": true,
   "scripts": {
     "lint": "eslint src",
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",

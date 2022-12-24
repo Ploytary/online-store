@@ -8,12 +8,12 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 
 const ENTRY_POINT = 'index.ts'
 const SOURCE_FOLDER = 'src';
-const BUILD_FOLDER = 'dest';
+const BUILD_FOLDER = 'dist';
 const isProduction = process.env.NODE_ENV === 'production';
 
 function runESLint() {
   console.log(process.env.NODE_ENV);
-  return process.env.NODE_ENV === 'production' ?  [new ESLintPlugin({ extensions: ['ts', 'js']})] : [];
+  return isProduction ? [new ESLintPlugin({ extensions: ['ts', 'js']})] : [];
 }
 
 module.exports = {
