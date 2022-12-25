@@ -1,0 +1,126 @@
+/*!********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/index.scss ***!
+  \********************************************************************************************************************************************************************************/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(assets/Montserrat-Regular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(assets/Montserrat-Bold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+.page {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+  color: #FFFFFF;
+  background-color: #03110C;
+}
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/app/main/components/checkbox/checkbox.scss ***!
+  \****************************************************************************************************************************************************************************************************************/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(assets/Montserrat-Regular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(assets/Montserrat-Bold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+.page {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+  color: #FFFFFF;
+  background-color: #03110C;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#check-on-tick {
+  fill: #FFFFFF;
+}
+
+.checkbox__input-icon-check-on {
+  flex-shrink: 0;
+  display: none;
+  fill: #1D996E;
+}
+
+.checkbox__input-icon-check-off {
+  flex-shrink: 0;
+  fill: #43494D;
+}
+
+.checkbox:hover .checkbox__input-icon-check-on {
+  fill: #14694b;
+}
+.checkbox:hover .checkbox__input-icon-check-off {
+  fill: #14694b;
+}
+
+.checkbox__input:checked ~ .checkbox__input-icon-check-on {
+  display: inline;
+}
+
+.checkbox__input:disabled ~ .checkbox__input-icon-check-on {
+  opacity: 0.4;
+}
+
+.checkbox__input:disabled:hover ~ .checkbox__input-icon-check-off {
+  fill: gray;
+}
+
+.checkbox__input:disabled:hover ~ .checkbox__input-icon-check-on {
+  fill: gray;
+}
+
+.checkbox__input:checked ~ .checkbox__input-icon-check-off {
+  display: none;
+}
+
+.checkbox__input:disabled ~ .checkbox__input-icon-check-off {
+  opacity: 0.4;
+}
+
+/*# sourceMappingURL=styles.css.map*/
