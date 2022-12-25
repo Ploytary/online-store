@@ -5,7 +5,8 @@ export type ComponentProps = {
   type?: string;
   name?: string;
   value?: string;
-  [propName: string]: string | string[] | undefined;
+  disabled?: boolean
+  [propName: string]: string | string[] | undefined | boolean;
 }
 
 
@@ -14,7 +15,7 @@ export interface IFunctionable {
 }
 
 export interface IListable {
-  getItems(list: {name: string; value: string; content: string}[]): void
+  getItems(list: string[]): void
 }
 
 export interface IExpandable {

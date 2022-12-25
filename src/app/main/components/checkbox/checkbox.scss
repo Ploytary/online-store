@@ -31,26 +31,15 @@
   }
 }
 
+.checkbox--disabled {
+  color: fade-out($font-color-primary, 0.8);
+  pointer-events: none;
+}
+
 .checkbox__input:checked ~ .checkbox__input-icon-check-on {
   display: inline;
 }
 
-.checkbox__input:disabled ~ .checkbox__input-icon-check-on {
-  opacity: 0.4;
-}
-
-.checkbox__input:disabled:hover ~ .checkbox__input-icon-check-off {
-  fill: gray;
-}
-
-.checkbox__input:disabled:hover ~ .checkbox__input-icon-check-on {
-  fill: gray;
-}
-
 .checkbox__input:checked ~ .checkbox__input-icon-check-off {
   display: none;
-}
-
-.checkbox__input:disabled ~ .checkbox__input-icon-check-off {
-  opacity: 0.4;
 }
