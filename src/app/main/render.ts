@@ -1,7 +1,9 @@
 import { CheckBox } from './components/checkbox/checkbox';
+import { BrandList } from './components/brand-list/brand-list';
 
 export const renderListPloytary = [
   new CheckBox({name: 'check1', value: 'checkvalue', content: 'шоколадница', dataItemId: 'custom-data'}),
+  new BrandList(),
 ]
 export const renderListmrdmitrij = [
   new CheckBox({name: 'просрал', value: 'всё', content: 'на свете', dataItemId: 'downgrade'}),
