@@ -1,3 +1,3 @@
 import './index.scss';
 import './app/main/render';
-import './app/main/router';
+import './app/main/hash-router';
