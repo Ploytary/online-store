@@ -1,0 +1,52 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+// .page-wrapper {
+//   max-width: 1170px;
+//   margin: 0 auto;
+// }
+
+
+//declarated-styles///////////////////////////////////////////////////
+
+//color
+$border-color-primary: #43494D;
+$accent-background-color-primary: #1D996E;
+$accent-background-color-secondary: #14694b;
+$background-color-deep: #03110C;
+$background-color-primary: #333333;
+$font-color-primary: #FFFFFF;
+
+// font
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+.page {
+  font-family: 'Montserrat';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+  color: $font-color-primary;
+  background-color: $background-color-deep;
+}

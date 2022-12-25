@@ -4,8 +4,44 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Online-store</title>
+  <style>
+    .workspace-list {
+      display: flex;
+      list-style-type: none;
+      gap: 5px;
+    }
+    .link {
+      display: block;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: skyblue;
+      text-decoration: none;
+      color: white;
+      font-weight: 700;
+      text-transform: uppercase;
+      border: 2px solid dodgerblue
+    }
+    .link--active {
+      background-color: dodgerblue;
+    }
+  </style>
 </head>
-  <body>
+  <body class="page">
+    <svg style="display: none">
+      <symbol id="check-off" width="24" height="24">
+        <path fill-rule="evenodd" d="M18 3H6C4.34315 3 3 4.34315 3 6v12c0 1.6569 1.34315 3 3 3h12c1.6569 0 3-1.3431 3-3V6c0-1.65685-1.3431-3-3-3ZM6 2C3.79086 2 2 3.79086 2 6v12c0 2.2091 1.79086 4 4 4h12c2.2091 0 4-1.7909 4-4V6c0-2.20914-1.7909-4-4-4H6Z" clip-rule="evenodd"/>
+      </symbol>
+      <symbol id="check-on" width="24" height="24">
+        <path id="check-on-background" d="M2 6c0-2.20914 1.79086-4 4-4h12c2.2091 0 4 1.79086 4 4v12c0 2.2091-1.7909 4-4 4H6c-2.20914 0-4-1.7909-4-4V6Z"/>
+        <path id="check-on-tick" fill-rule="evenodd" d="M18.4942 7.28025c.3975.38336.4091 1.01642.0257 1.41398L11.577 15.8942c-.1898.1969-.452.3074-.7254.3059-.2735-.0016-.5344-.115-.722-.314l-3.85714-4.0909c-.37888-.4018-.36026-1.0347.04158-1.4136.40183-.3789 1.03472-.3603 1.4136.0416l3.13766 3.3278 6.2149-6.44504c.3834-.39756 1.0164-.40907 1.414-.02571Z" clip-rule="evenodd"/>
+      </symbol>
+    </svg>
+    
+    <ul class="workspace-list">
+      <li><a class="link" href="#ploytary">Дима @ploytary</a></li>
+      <li><a class="link" href="#mrdmitrij">Дима @mrdmitrij</a></li>
+    </ul>
+    <div class="dev-container"></div>
   </body>
 </html>

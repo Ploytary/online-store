@@ -1,5 +1,6 @@
 node_modules
 dist
+.vscode
 *.ai
 *.log
 *.pdf
@@ -8,5 +9,4 @@ dist
 **/inline-svg
 node_modules/
 npm-debug.*
-crosscheck/
 Thumbs.db
