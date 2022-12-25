@@ -1,6 +1,6 @@
 import { ComponentProps } from "../../../shared/models/types";
 
-export abstract class BaseComponent {
+export class BaseComponent {
   public node: HTMLElement;
 
   constructor(props: ComponentProps) {
