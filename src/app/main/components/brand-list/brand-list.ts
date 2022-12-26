@@ -14,13 +14,13 @@ export class BrandList extends BaseComponent {
   public expandButton: HTMLElement;
 
   constructor(props: ComponentProps = {}) {
-    props.tagName = 'section';
+    props.tagName = 'fieldset';
     props.classList = ['brand-list-section'];
     super(props);
 
     const listElement = new ListComponent({classList: ['brand-list-section__list']}).node;
     this.listElement = listElement;
-    const listTitleElement = new BaseComponent({tagName: 'h2', classList: ['brand-list-section__title'], content: 'Brand'}).node;
+    const listTitleElement = new BaseComponent({tagName: 'h3', classList: ['brand-list-section__title'], content: 'Brand'}).node;
     const expandLink = new BaseComponent({tagName: 'a', classList: ['brand-list-section__expand-link', 'link'], content: 'show more'}).node;
     this.expandButton = expandLink;
 
@@ -34,7 +34,7 @@ export class BrandList extends BaseComponent {
     const optionNameFamily = 'brand';
     list.forEach((brandName) => {
       const listItem = new BaseComponent({tagName: 'li', classList: ['brand-list-section__list-item']}).node;
-      const checkbox = new CheckBox({name: optionNameFamily, value: brandName, content: brandName, disabled: true}).node;
+      const checkbox = new CheckBox({name: optionNameFamily, value: brandName, content: brandName}).node;
       listItem.append(checkbox);
       this.itemsList.push(listItem);
       listElement.append(listItem);
@@ -43,7 +43,7 @@ export class BrandList extends BaseComponent {
 
   toggleExpand(): void {
     this.itemsList.forEach((item, index) => {
-      if(index < this.elementToShow) item.classList.add('brand-list-section__list-item--visible');
+      if(index < this.elementToShow) item.classList.add('brand-list-section__list-item--initial-visible');
     });
 
     this.expandButton.addEventListener('click', (event: any) => {
