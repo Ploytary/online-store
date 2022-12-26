@@ -24,20 +24,20 @@
   flex-direction: column;
   gap: 10px;
 }
-.brand-list-section__list-item {
+.category-list-section__list-item {
   display:list;
-  &:not(.brand-list-section__list-item--initial-visible) {
+  &:not(.category-list-section__list-item--initial-visible) {
     display:none;
   }
 }
-.brand-list-section__expand-link {
+.category-list-section__expand-link {
   position: relative;
   color: $accent-background-color-primary;
   cursor: pointer;
 }
 
-.brand-list-section__list--open {
-  .brand-list-section__list-item:not(.brand-list-section__list-item--initial-visible) {
+.category-list-section__list--open {
+  .category-list-section__list-item:not(.category-list-section__list-item--initial-visible) {
     display: list-item;
   }
 }
