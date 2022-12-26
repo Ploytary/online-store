@@ -1,0 +1,43 @@
+@import '../../../../index.scss';
+
+.list-section {
+  background-color: $background-color-primary;
+  padding: 25px 0; 
+  border-bottom: 1px solid $accent-background-color-primary;
+  border-top: 1px solid $accent-background-color-primary;
+}
+
+.section__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  font: $font-style-list-title;
+}
+
+.section__list {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.category-list-section__list-item {
+  display:list;
+  &:not(.category-list-section__list-item--initial-visible) {
+    display:none;
+  }
+}
+.category-list-section__expand-link {
+  position: relative;
+  color: $accent-background-color-primary;
+  cursor: pointer;
+}
+
+.category-list-section__list--open {
+  .category-list-section__list-item:not(.category-list-section__list-item--initial-visible) {
+    display: list-item;
+  }
+}
