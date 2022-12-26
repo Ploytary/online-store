@@ -15,12 +15,12 @@ export class BrandList extends BaseComponent {
 
   constructor(props: ComponentProps = {}) {
     props.tagName = 'fieldset';
-    props.classList = ['brand-list-section'];
+    props.classList = ['brand-list-section', 'list-section'];
     super(props);
 
-    const listElement = new ListComponent({classList: ['brand-list-section__list']}).node;
+    const listElement = new ListComponent({classList: ['section__list']}).node;
     this.listElement = listElement;
-    const listTitleElement = new BaseComponent({tagName: 'h3', classList: ['brand-list-section__title'], content: 'Brand'}).node;
+    const listTitleElement = new BaseComponent({tagName: 'h3', classList: ['section__title'], content: 'Brand'}).node;
     const expandLink = new BaseComponent({tagName: 'a', classList: ['brand-list-section__expand-link', 'link'], content: 'show more'}).node;
     this.expandButton = expandLink;
 
@@ -33,7 +33,7 @@ export class BrandList extends BaseComponent {
   getItems(list: string[], listElement: HTMLElement): void {
     const optionNameFamily = 'brand';
     list.forEach((brandName) => {
-      const listItem = new BaseComponent({tagName: 'li', classList: ['brand-list-section__list-item']}).node;
+      const listItem = new BaseComponent({tagName: 'li', classList: ['brand-list-section__list-item', 'section__list-item']}).node;
       const checkbox = new CheckBox({name: optionNameFamily, value: brandName, content: brandName}).node;
       listItem.append(checkbox);
       this.itemsList.push(listItem);

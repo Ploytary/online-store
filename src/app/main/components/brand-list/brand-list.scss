@@ -1,14 +1,13 @@
-
 @import '../../../../index.scss';
 
-.brand-list-section {
+.list-section {
   background-color: $background-color-primary;
   padding: 25px 0; 
   border-bottom: 1px solid $accent-background-color-primary;
   border-top: 1px solid $accent-background-color-primary;
 }
 
-.brand-list-section__title {
+.section__title {
   margin: 0;
   margin-bottom: 20px;
   font-size: 18px;
@@ -16,7 +15,7 @@
   font: $font-style-list-title;
 }
 
-.brand-list-section__list {
+.section__list {
   padding: 0;
   margin: 0;
   margin-bottom: 20px;
