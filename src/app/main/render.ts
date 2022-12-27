@@ -1,7 +1,7 @@
 import { CheckBox } from './components/checkbox/checkbox';
 import { BrandList } from './components/brand-list/brand-list';
 import { CategoryList } from './components/category-list/category-list';
-import { PageNotFound } from '../main/pages/page-not-found';
+import { PageNotFound } from './pages/page-not-found/page-not-found';
 
 export const renderListPloytary = [
   new BrandList(),
