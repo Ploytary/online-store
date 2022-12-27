@@ -5,7 +5,10 @@ export type ComponentProps = {
   type?: string;
   name?: string;
   value?: string;
-  disabled?: boolean
+  disabled?: boolean;
+  min?: string;
+  max?: string;
+  step?: string;
   [propName: string]: string | string[] | undefined | boolean;
 }
 
