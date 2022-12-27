@@ -1,0 +1,20 @@
+@import '../../../index.scss';
+
+
+.section-error {
+  font: $font-style-base-text;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-error__title {
+  font-size: 60px;
+  line-height: 73px;
+  margin: 0 0 24px;
+}
+
+.section-error__subtitle {
+  margin-bottom: 40px;
+}

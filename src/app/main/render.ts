@@ -1,6 +1,7 @@
 import { CheckBox } from './components/checkbox/checkbox';
 import { BrandList } from './components/brand-list/brand-list';
 import { CategoryList } from './components/category-list/category-list';
+import { PageNotFound } from '../main/pages/page-not-found';
 
 export const renderListPloytary = [
   new BrandList(),
@@ -8,6 +9,7 @@ export const renderListPloytary = [
 ]
 export const renderListmrdmitrij = [
   new CheckBox({name: 'просрал', value: 'всё', content: 'на свете', dataItemId: 'downgrade'}),
+  new PageNotFound({}),
 ]
 
 export function render(elementList: object): HTMLElement {
