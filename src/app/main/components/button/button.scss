@@ -1,7 +1,8 @@
 @import '../../../../index.scss';
 
 .button {
-  padding: 14px 20px;
+  font: normal 16px/120% "Montserrat", sans-serif;
   border-radius: 4px;
   background: $accent-background-color-primary;
+  color: $font-color-primary;
 }
