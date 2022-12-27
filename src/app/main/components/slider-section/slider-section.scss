@@ -1,0 +1,16 @@
+@import '../../../../index.scss';
+
+.slider-section {
+  margin: 0;
+  padding: 0;
+  padding-top: 25px;
+  padding-bottom: 32px;
+  border-style: none;
+  background-color: $background-color-primary;
+}
+
+.slider-section__title {
+  margin: 0;
+  margin-bottom: 13px;
+  font: $font-style-list-title;
+}

@@ -1870,33 +1870,54 @@ export var data = {
         'https://i.dummyjson.com/data/products/100/thumbnail.jpg',
       ],
     },
-  ]
+  ],
 };
 
-export const brandList = getList(data, 'brand');
-export const categoryList = getList(data, 'category');
+export const brandList = getStringValueList(data, 'brand');
+export const categoryList = getStringValueList(data, 'category');
+export const priceRange = getNumericValueRange(data, 'price');
 
-function getList(dataObject: any, prop: string): string[] {
-  const propValuesArray: string[] = [];
+function getStringValueList(dataObject: any, prop: string, capitalize = true, ascendSort = true, uniqValues = true): string[] {
+  let valueList = getList<string>(dataObject, prop);
+  if (capitalize) {
+    valueList = valueList.map((value) => value[0].toUpperCase() + value.slice(1).toLowerCase());
+  }
+  if (ascendSort) {
+    valueList.sort();
+  }
+  if (uniqValues) {
+    const unic = new Set(valueList);
+    valueList = Array.from(unic);
+  }
+  return valueList;
+}
+
+function getNumericValueRange(dataObject: any, prop: string): { minValue: number; maxValue: number } {
+  const valueList = getList<number>(dataObject, prop);
+  const ascendingSortedList = valueList.slice().sort((a, b) => a - b);
+  const priceRange = {
+    minValue: ascendingSortedList[0],
+    maxValue: ascendingSortedList[ascendingSortedList.length - 1],
+  };
+  return priceRange;
+}
+
+function getList<T>(dataObject: any, prop: string): T[] {
+  const propValuesArray: T[] = [];
 
   propValuesArray.push(walkGraph(dataObject, prop));
-  const capitalized = propValuesArray.filter((item) => item !== undefined).map((name) => name[0].toUpperCase() + name.slice(1).toLowerCase());
-  const unicItems = new Set(capitalized);
-  const list = Array.from(unicItems).sort();
-  return list;
+  const validValuesArray = propValuesArray.filter((item) => item !== undefined);
+  return Array.from(validValuesArray);
 
   function walkGraph(dataObject: any, prop: string): any {
-    for(let key in dataObject) {
+    for (let key in dataObject) {
       if (typeof dataObject[key] !== 'object') {
-        if(prop in dataObject) {
+        if (prop in dataObject) {
           return dataObject[prop];
         }
-      }
-      else {
+      } else {
         propValuesArray.push(walkGraph(dataObject[key], prop));
       }
     }
   }
 }
-
-
