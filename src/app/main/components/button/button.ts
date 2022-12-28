@@ -8,11 +8,11 @@ export class Button extends BaseComponent {
     props.tagName = 'button';
     props.classList?.push('button');
     super(props);
-    // const { type = 'button'} = props;
+    const { type = 'button'} = props;
 
-    // if(this.node instanceof HTMLButtonElement) {
-    //   this.node.type = type;
-    // }
+    if(this.node instanceof HTMLButtonElement) {
+      this.node.type = type;
+    }
   }
 
   // abstract addListener(eventType: keyof HTMLElementEventMap, eventListener: EventListenerOrEventListenerObject): void;
