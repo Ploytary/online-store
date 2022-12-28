@@ -1,10 +1,12 @@
+import './button.scss';
 import { BaseComponent } from "../base-component/base-component";
-import { ComponentProps, IFunctionable } from "../../../shared/models/types";
+import { ComponentProps } from "../../../shared/models/types";
 
-export abstract class Button extends BaseComponent implements IFunctionable {
+export class Button extends BaseComponent {
 
   constructor(props: ComponentProps) {
     props.tagName = 'button';
+    props.classList?.push('button');
     super(props);
     const { type = 'button'} = props;
 
@@ -13,5 +15,5 @@ export abstract class Button extends BaseComponent implements IFunctionable {
     }
   }
 
-  abstract addListener(eventType: keyof HTMLElementEventMap, eventListener: EventListenerOrEventListenerObject): void;
+  // abstract addListener(eventType: keyof HTMLElementEventMap, eventListener: EventListenerOrEventListenerObject): void;
 }
