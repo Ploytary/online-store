@@ -2,13 +2,15 @@ import { CheckBox } from './components/checkbox/checkbox';
 import { BrandList } from './components/brand-list/brand-list';
 import { CategoryList } from './components/category-list/category-list';
 import { PageNotFound } from './pages/page-not-found/page-not-found';
+import { RangeSlider } from './components/range-slider/range-slider';
+import { PriceRangeSlider } from './components/price-range-slider/price-range-slider';
 
 export const renderListPloytary = [
   new BrandList(),
   new CategoryList(),
+  new PriceRangeSlider(),
 ]
 export const renderListmrdmitrij = [
-  new CheckBox({name: 'просрал', value: 'всё', content: 'на свете', dataItemId: 'downgrade'}),
   new PageNotFound({}),
 ]
 
