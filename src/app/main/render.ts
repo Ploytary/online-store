@@ -4,9 +4,10 @@ import { PageNotFound } from './pages/page-not-found/page-not-found';
 import { PriceRangeSlider } from './components/price-range-slider/price-range-slider';
 import { StockRangeSlider } from './components/stock-range-slider/stock-range-slider';
 import { CatalogFilter } from './components/catalog-filter/catalog-filter';
+import { CatalogHeadline } from './components/catalog-headline/catalog-headline';
 
 export const renderListPloytary = [
-  new CatalogFilter(),
+  new CatalogHeadline(),
 ]
 export const renderListmrdmitrij = [
   new PageNotFound({}),

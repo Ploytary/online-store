@@ -9,6 +9,8 @@ export type ComponentProps = {
   min?: string;
   max?: string;
   step?: string;
+  placeholder?: string;
+  selectOptions?: string[];
   [propName: string]: string | string[] | undefined | boolean;
 }
 
