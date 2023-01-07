@@ -1,0 +1,32 @@
+@import '../../../../index.scss';
+
+.catalog__filter {
+  padding: 15px;
+  background-color: $background-color-primary;
+}
+
+.catalog__filter-headline {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.catalog__filter-title {
+  margin: 0;
+  font: $font-style-section-title-normal;
+}
+
+.catalog__filter-reset-link {
+  color: $accent-background-color-primary
+}
+
+.catalog__filter-content > *:not(:last-child) {
+  border-bottom: 1px solid $accent-background-color-primary;
+}
+
+.catalog__filter-controls {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}

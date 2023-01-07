@@ -1,8 +1,14 @@
 @import '../../../../index.scss';
 
 .button {
+  padding: 14px;
   font: $font-style-base-text;
-  border-radius: 4px;
-  background: $accent-background-color-primary;
   color: $font-color-primary;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid $border-color-primary;
+}
+
+.button--accent {
+  background: $accent-background-color-primary;
 }

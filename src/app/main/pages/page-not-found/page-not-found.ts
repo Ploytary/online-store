@@ -23,7 +23,7 @@ export class PageNotFound extends BaseComponent {
       content: 'This page not found Back to home and start again'
     });
     this.button = new Button({
-      classList: ['section-error__button'],
+      classList: ['section-error__button', 'button--accent'],
       content: 'To homepage'
     })
     this.node.append(this.title.node, this.subtitle.node, this.button.node);

@@ -13,7 +13,7 @@ export class StockRangeSlider extends BaseComponent {
     props.tagName = 'fieldset';
     props.classList = ['stock-range-slider', 'slider-section'];
     super(props);
-    this.titleElement = new BaseComponent({tagName: 'h3', classList: ['stock-range-slider__title', 'slider-section__title'], content: 'Stock'}).node;
+    this.titleElement = new BaseComponent({tagName: 'h4', classList: ['stock-range-slider__title', 'slider-section__title'], content: 'Stock'}).node;
     this.sliderElement = new RangeSlider({classList: ['stock-range-slider__range-slider']}, stockRange.minValue, stockRange.maxValue).node;
     this.node.append(this.titleElement, this.sliderElement);
     console.log(this.sliderElement);
