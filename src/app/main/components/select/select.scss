@@ -1,0 +1,10 @@
+@import '../../../../index.scss';
+
+.select {
+  background-color: transparent;
+  border: 1px solid $border-color-primary;
+  border-radius: 4px;
+  padding: 9px 10px;
+  color: inherit;
+  font: inherit;
+}
