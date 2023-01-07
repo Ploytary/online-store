@@ -23,7 +23,7 @@ export class RangeSlider extends BaseComponent {
     this.minValue = initMinValue;
     this.maxValue = initMaxValue;
 
-    //импуты с ценами
+    //импуты
     const inputsContainer = new BaseComponent({ tagName: 'div', classList: ['range-slider__price-input'] }).node;
     this.minValueInputElement = new Input({ classList: ['range-slider__min'], type: 'number', value: this.minValue.toString()}).node as HTMLInputElement;
     this.maxValueInputElement = new Input({ classList: ['range-slider__max'], type: 'number', value: this.maxValue.toString()}).node as HTMLInputElement;
@@ -44,7 +44,7 @@ export class RangeSlider extends BaseComponent {
 
     const rangeInput = [this.handlerMinElement, this.handlerMaxElement];
     const priceInput = [this.minValueInputElement, this.maxValueInputElement];
-    let priceGap = Math.floor(this.maxValue / 10) < 1 ? 1 : Math.floor(this.maxValue / 10);
+    let priceGap = 1;
 
     //обработчики
     priceInput.forEach((input) => {
@@ -66,7 +66,7 @@ export class RangeSlider extends BaseComponent {
         this.maxValue = +this.maxValueInputElement.value;
       });
     });
-
+    
     rangeInput.forEach((input) => {
       input.addEventListener('input', (evt: Event) => {
         let minVal = parseInt(this.handlerMinElement.value);
@@ -91,7 +91,7 @@ export class RangeSlider extends BaseComponent {
     });
 
     const event = new Event('input');
-    [...rangeInput,...priceInput].forEach(element => element.dispatchEvent(event));
+    priceInput.forEach(element => element.dispatchEvent(event));
   }
 
   updateSlider(sliderRangeData: {minValue: number, maxValue: number}):void {

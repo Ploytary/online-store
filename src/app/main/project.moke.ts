@@ -1876,6 +1876,7 @@ export var data = {
 export const brandList = getStringValueList(data, 'brand');
 export const categoryList = getStringValueList(data, 'category');
 export const priceRange = getNumericValueRange(data, 'price');
+export const stockRange = getNumericValueRange(data, 'stock');
 
 function getStringValueList(dataObject: any, prop: string, capitalize = true, ascendSort = true, uniqValues = true): string[] {
   let valueList = getList<string>(dataObject, prop);
