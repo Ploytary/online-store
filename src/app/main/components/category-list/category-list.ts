@@ -20,7 +20,7 @@ export class CategoryList extends BaseComponent {
 
     const listElement = new ListComponent({classList: ['section__list']}).node;
     this.listElement = listElement;
-    const listTitleElement = new BaseComponent({tagName: 'h3', classList: ['section__title'], content: 'Category'}).node;
+    const listTitleElement = new BaseComponent({tagName: 'h4', classList: ['section__title'], content: 'Category'}).node;
     const expandLink = new BaseComponent({tagName: 'a', classList: ['category-list-section__expand-link', 'link'], content: 'show more'}).node;
     this.expandButton = expandLink;
 

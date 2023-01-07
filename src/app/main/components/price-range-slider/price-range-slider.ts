@@ -13,7 +13,7 @@ export class PriceRangeSlider extends BaseComponent {
     props.tagName = 'fieldset';
     props.classList = ['price-range-slider', 'slider-section'];
     super(props);
-    this.titleElement = new BaseComponent({tagName: 'h3', classList: ['price-range-slider__title', 'slider-section__title'], content: 'Price'}).node;
+    this.titleElement = new BaseComponent({tagName: 'h4', classList: ['price-range-slider__title', 'slider-section__title'], content: 'Price'}).node;
     this.sliderElement = new RangeSlider({classList: ['price-range-slider__range-slider']}, priceRange.minValue, priceRange.maxValue).node;
     this.node.append(this.titleElement, this.sliderElement);
   }

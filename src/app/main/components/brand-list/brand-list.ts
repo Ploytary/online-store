@@ -20,7 +20,7 @@ export class BrandList extends BaseComponent {
 
     const listElement = new ListComponent({classList: ['section__list']}).node;
     this.listElement = listElement;
-    const listTitleElement = new BaseComponent({tagName: 'h3', classList: ['section__title'], content: 'Brand'}).node;
+    const listTitleElement = new BaseComponent({tagName: 'h4', classList: ['section__title'], content: 'Brand'}).node;
     const expandLink = new BaseComponent({tagName: 'a', classList: ['brand-list-section__expand-link', 'link'], content: 'show more'}).node;
     this.expandButton = expandLink;
 
