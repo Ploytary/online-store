@@ -9,13 +9,16 @@ export class Input extends BaseComponent {
     props.tagName = 'input';
     super(props);
 
-    const {type = 'text', value, min = '0', max = '10000', step = '1'} = props;
+    const {type = 'text', value, min = '0', max = '10000', step = '1', placeholder} = props;
     const classList = ['input'];
     this.node.classList.add(...classList)
     if (this.node instanceof HTMLInputElement) {
       this.node.type = type;
       if(value) {
         this.node.value = value;
+      }
+      if(placeholder) {
+        this.node.placeholder = placeholder;
       }
       if (this.node.type === 'range') {
         this.node.min = min;
