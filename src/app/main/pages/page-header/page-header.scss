@@ -1,0 +1,16 @@
+@import '../../../../index.scss';
+
+.page-header {
+  padding: 10px 0;
+  background-color: $background-color-primary;
+}
+
+.page-header .page-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.site-navigation {
+  flex-grow: 1;
+}
