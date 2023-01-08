@@ -7,6 +7,7 @@ export type ComponentProps = {
   id?: string;
   value?: string | number;
   href?: string;
+  SVGIconID?: string;
   disabled?: boolean;
   min?: string;
   max?: string;
