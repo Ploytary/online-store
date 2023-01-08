@@ -3,4 +3,6 @@
 .link {
   cursor: pointer;
   font: $font-style-list-title;
+  color: inherit;
+  text-decoration: none;
 }
