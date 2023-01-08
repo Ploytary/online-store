@@ -1,0 +1,139 @@
+@import '../../../../index.scss';
+
+.product-card-preview {
+  padding-bottom: 10px;
+  background-color: $background-color-primary;
+  display: grid;
+  grid-template-columns: 10px 1fr 10px;
+}
+
+.product-card-preview__image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 16px;
+  grid-column: 1 / -1;
+}
+
+.product-card-preview__title {
+  margin: 0;
+  margin-bottom: 6px;
+  font: $font-style-list-title;
+  grid-column: 2;
+}
+
+.product-card-preview__category {
+  display: none;
+  margin: 0;
+  grid-column: 2;
+}
+
+.product-card-preview__brand {
+  margin: 0;
+  margin-bottom: 16px;
+  grid-column: 2;
+}
+
+.product-card-preview__description {
+  display: none;
+  margin: 0;
+  grid-column: 2;
+}
+
+.product-card-preview__price {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 0;
+  margin-bottom: 16px;
+  font: $font-style-section-title-normal;
+  font-size: 24px;
+  grid-column: 2;
+}
+
+.product-card-preview__base-price {
+  font-size: 20px;
+  text-decoration: line-through;
+}
+
+.product-card-preview__rating {
+  grid-column: 2;
+  margin-bottom: 20px;
+}
+
+.product-card-preview__cart-button {
+  grid-column: 2;
+  justify-self: end;
+}
+
+.product-card-preview__stock {
+  display: none;
+  margin: 0;
+}
+
+
+.product-card-preview--list {
+  display: grid;
+  gap: 10px 32px;
+  grid-template-columns: auto auto 1fr;
+  grid-template-rows: auto auto 1fr;
+  padding: 10px;
+
+  & .product-card-preview__image {
+    width: 200px;
+    height: 200px;
+    grid-column: 1;
+    grid-row: 1 / 6;
+    margin: 0;
+  }
+
+  & .product-card-preview__rating {
+    grid-column: 1;
+    grid-row: 6 / span 1;
+    justify-self: center;
+    margin: 0;
+  }
+
+  & .product-card-preview__title {
+    grid-row: 1;
+    grid-column: 2 / -1;
+    margin: 0;
+  }
+
+  & .product-card-preview__brand {
+    grid-column: 2;
+    margin: 0;
+  }
+
+  & .product-card-preview__category {
+    display: block;
+    grid-column: 3;
+    margin: 0;
+  }
+
+  & .product-card-preview__description {
+    display: block;
+    grid-column: 2 / -1;
+    margin: 0;
+  }
+
+  & .product-card-preview__price {
+    grid-column: 2 / -1;
+    grid-row: 5 / span 2;
+    margin: 0;
+    align-items: center;
+  }
+
+  & .product-card-preview__cart-button {
+    grid-column: 2 / -1;
+    grid-row: 5 / span 2;
+    align-self: end;
+  }
+
+  & .product-card-preview__stock {
+    display: block;
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+  }
+}

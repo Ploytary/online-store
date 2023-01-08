@@ -15,7 +15,11 @@ export class Input extends BaseComponent {
     if (this.node instanceof HTMLInputElement) {
       this.node.type = type;
       if(value) {
-        this.node.value = value;
+        if (typeof value === 'number') {
+          this.node.value = value.toString();
+        } else {
+          this.node.value = value;
+        }
       }
       if(placeholder) {
         this.node.placeholder = placeholder;
