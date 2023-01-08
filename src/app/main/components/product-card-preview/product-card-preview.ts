@@ -18,7 +18,7 @@ export class ProductCardPreview extends BaseComponent {
   public rating: number;
   public stock: number;
   public brand: string;
-  public thrumbSRC: string;
+  public thumbSRC: string;
 
   constructor(productData: any, props: ComponentProps = {}) {
     props.tagName = 'article';
@@ -26,7 +26,7 @@ export class ProductCardPreview extends BaseComponent {
     props.classList = ['product-card-preview'];
     super(props);
 
-    const {id, title, category, description, price, discountPercentage, rating, stock, brand, thrumbnail, images} = productData;
+    const {id, title, category, description, price, discountPercentage, rating, stock, brand, thumbnail, images} = productData;
     this.id = id;
     this.title = title;
     this.category = category;
@@ -37,10 +37,10 @@ export class ProductCardPreview extends BaseComponent {
     this.rating = rating;
     this.stock = stock;
     this.brand = brand;
-    this.thrumbSRC = thrumbnail;
+    this.thumbSRC = thumbnail;
     this.images = images;
 
-    const imageComponent = new Image({width: 288, height: 288, classList: ['product-card-preview__image']});
+    const imageComponent = new Image({width: 288, height: 288, classList: ['product-card-preview__image'], src: this.thumbSRC});
     const titleComponent = new BaseComponent({tagName: 'h2', classList: ['product-card-preview__title'], content: this.title});
     const brandComponent = new BaseComponent({tagName: 'p', classList: ['product-card-preview__brand'], content: this.brand});
     const categoryComponent = new BaseComponent({tagName: 'p', classList: ['product-card-preview__category'], content: this.category});

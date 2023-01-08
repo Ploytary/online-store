@@ -17,7 +17,7 @@ export class CatalogHeadline extends BaseComponent {
 
     const viewControlComponent = new BaseComponent({tagName: 'div', classList: ['catalog__view-control']});
     const sortComponent = new Select({selectOptions: ['Sort By: Position', 'Sort By: Name']});
-    const showCountComponent = new Select({selectOptions: ['Show: 5 per page', 'Show: 10 per page', 'Show: 15 per page']});
+    const showCountComponent = new Select({selectOptions: ['Show: 6 per page', 'Show: 12 per page', 'Show: 18 per page']});
     const tileButton = new IconButton({content: 'Tile', classList: ['icon-button--tile']});
     const listButton = new IconButton({content: 'List', classList: ['icon-button--list']});
     const buttonGroup = new BaseComponent({tagName: 'div', classList: ['catalog__headline-button-group']});

@@ -1,0 +1,40 @@
+@import '../../../../index.scss';
+
+.catalog .page-wrapper {
+
+}
+
+.catalog__title {
+  margin: 0;
+  margin-bottom: 36px;
+  font: $font-style-section-title-big;
+}
+
+.catalog__content {
+  display: grid;
+  gap: 20px 32px;
+  grid-template-columns: 288px 1fr;
+}
+
+.catalog__headline {
+  grid-column: 1 / span 2;
+}
+
+.catalog__filter {
+  grid-column: 1;
+  align-self: start;
+}
+
+.catalog__lists {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.catalog__product-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 288px);
+  gap: 56px 32px;
+}
