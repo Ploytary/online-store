@@ -12,9 +12,9 @@ export class SiteNavigation extends BaseComponent {
     super(props);
 
     const listComponent = new ListComponent({classList: ['site-navigation__list']});
-    ['Home', 'Shop', 'Categories'].forEach((item) => {
+    ['Home', 'Shop', 'Categories', 'ploytary', 'mrdmitrij'].forEach((item) => {
       const liElementComponent = new BaseComponent({tagName: 'li', classList: ['site-navigation__item']});
-      const link = new Link({classList: ['site-navigation__item'], content: item, id: item});
+      const link = new Link({classList: ['site-navigation__item'], content: item, id: item, href: item === 'Home' ? '#catalog' : '#' + item});
       liElementComponent.node.append(link.node);
       listComponent.node.append(liElementComponent.node);
     });

@@ -1,32 +1,10 @@
 import { PageNotFound } from './pages/page-not-found/page-not-found';
 import { Catalog } from './pages/catalog/catalog';
-import { SiteNavigation } from './components/site-naviation/site-navigation';
-import { UserNavigation } from './components/user-navigation/user-navigation';
-
-const data1 = {
-  id: 1,
-  title: 'iPhone 9',
-  description: 'An apple mobile which is nothing like apple',
-  price: 549,
-  discountPercentage: 12.96,
-  rating: 4.69,
-  stock: 94,
-  brand: 'Apple',
-  category: 'smartphones',
-  thumbnail: 'https://i.dummyjson.com/data/products/1/thumbnail.jpg',
-  images: [
-    'https://i.dummyjson.com/data/products/1/1.jpg',
-    'https://i.dummyjson.com/data/products/1/2.jpg',
-    'https://i.dummyjson.com/data/products/1/3.jpg',
-    'https://i.dummyjson.com/data/products/1/4.jpg',
-    'https://i.dummyjson.com/data/products/1/thumbnail.jpg',
-  ]
-}
+import { PageHeader } from './pages/page-header/page-header';
 
 export const renderListPloytary = [
+  new PageHeader(),
   new Catalog(),
-  new SiteNavigation(),
-  new UserNavigation(),
 ]
 export const renderListmrdmitrij = [
   new PageNotFound({}),
