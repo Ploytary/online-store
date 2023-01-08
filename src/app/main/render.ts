@@ -1,12 +1,5 @@
-import { BrandList } from './components/brand-list/brand-list';
-import { CategoryList } from './components/category-list/category-list';
 import { PageNotFound } from './pages/page-not-found/page-not-found';
-import { PriceRangeSlider } from './components/price-range-slider/price-range-slider';
-import { StockRangeSlider } from './components/stock-range-slider/stock-range-slider';
-import { CatalogFilter } from './components/catalog-filter/catalog-filter';
-import { CatalogHeadline } from './components/catalog-headline/catalog-headline';
-import { ProductCardPreview } from './components/product-card-preview/product-card-preview';
-import { Pagination } from './components/pagination/pagination';
+import { Catalog } from './pages/catalog/catalog';
 
 const data1 = {
   id: 1,
@@ -29,9 +22,7 @@ const data1 = {
 }
 
 export const renderListPloytary = [
-  new CatalogHeadline(),
-  new ProductCardPreview(data1),
-  new Pagination(6),
+  new Catalog(),
 ]
 export const renderListmrdmitrij = [
   new PageNotFound({}),

@@ -9,10 +9,10 @@
   clip: rect(0 0 0 0);
 }
 
-// .page-wrapper {
-//   max-width: 1170px;
-//   margin: 0 auto;
-// }
+.page-wrapper {
+  max-width: 1248px;
+  margin: 0 auto;
+}
 
 
 //declarated-styles///////////////////////////////////////////////////
@@ -31,6 +31,7 @@ $font-color-primary: #FFFFFF;
 $font-style-base-text: normal 16px/120% "Montserrat", sans-serif;
 $font-style-list-title: bold 18px/120% "Montserrat", sans-serif;
 $font-style-section-title-normal: bold 24px/120% "Montserrat", sans-serif;
+$font-style-section-title-big: bold 60px/120% "Montserrat", sans-serif;
 
 
 @font-face {
