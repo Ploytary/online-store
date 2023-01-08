@@ -11,7 +11,7 @@ export class Link extends BaseComponent {
 
     this.node.classList.add('link');
     const {href} = props;
-    if (this.node instanceof HTMLLinkElement) {
+    if (this.node instanceof HTMLAnchorElement) {
       if (href) {
         this.node.href = href;
       }
