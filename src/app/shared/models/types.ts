@@ -4,14 +4,18 @@ export type ComponentProps = {
   content?: string;
   type?: string;
   name?: string;
-  value?: string;
+  value?: string | number;
   disabled?: boolean;
   min?: string;
   max?: string;
   step?: string;
   placeholder?: string;
   selectOptions?: string[];
-  [propName: string]: string | string[] | undefined | boolean;
+  src?: string;
+  alt?: string;
+  width?: number;
+  height?: number;
+  [propName: string]: string | string[] | undefined | boolean | number;
 }
 
 
