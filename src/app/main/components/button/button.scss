@@ -13,3 +13,13 @@
   border-style: none;
   background: $accent-background-color-primary;
 }
+
+.button--pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border-style: none;
+  background-color: $background-color-tertiary;
+}

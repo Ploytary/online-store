@@ -4,6 +4,7 @@ export type ComponentProps = {
   content?: string;
   type?: string;
   name?: string;
+  id?: string;
   value?: string | number;
   disabled?: boolean;
   min?: string;

@@ -4,11 +4,14 @@ export class BaseComponent {
   public node: HTMLElement;
 
   constructor(props: ComponentProps) {
-    const {tagName = 'div', classList = [], content = ''} = props;
+    const {tagName = 'div', classList = [], content = '', id} = props;
     const el = document.createElement(tagName);
     
     el.classList.add(...classList);
     el.textContent = content;
+    if (id) {
+      el.id = id;
+    }
     this.node = el;
 
     if(props) {

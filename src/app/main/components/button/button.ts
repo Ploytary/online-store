@@ -6,8 +6,8 @@ export class Button extends BaseComponent {
 
   constructor(props: ComponentProps) {
     props.tagName = 'button';
-    props.classList?.push('button');
     super(props);
+    this.node.classList.add('button');
     const { type = 'button'} = props;
 
     if(this.node instanceof HTMLButtonElement) {

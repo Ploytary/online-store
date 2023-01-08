@@ -6,6 +6,7 @@ import { StockRangeSlider } from './components/stock-range-slider/stock-range-sl
 import { CatalogFilter } from './components/catalog-filter/catalog-filter';
 import { CatalogHeadline } from './components/catalog-headline/catalog-headline';
 import { ProductCardPreview } from './components/product-card-preview/product-card-preview';
+import { Pagination } from './components/pagination/pagination';
 
 const data1 = {
   id: 1,
@@ -30,6 +31,7 @@ const data1 = {
 export const renderListPloytary = [
   new CatalogHeadline(),
   new ProductCardPreview(data1),
+  new Pagination(6),
 ]
 export const renderListmrdmitrij = [
   new PageNotFound({}),
