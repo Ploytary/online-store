@@ -1,5 +1,6 @@
 import { PageNotFound } from './pages/page-not-found/page-not-found';
 import { Catalog } from './pages/catalog/catalog';
+import { SiteNavigation } from './components/site-naviation/site-navigation';
 
 const data1 = {
   id: 1,
@@ -23,6 +24,7 @@ const data1 = {
 
 export const renderListPloytary = [
   new Catalog(),
+  new SiteNavigation(),
 ]
 export const renderListmrdmitrij = [
   new PageNotFound({}),

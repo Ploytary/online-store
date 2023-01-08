@@ -6,6 +6,7 @@ export type ComponentProps = {
   name?: string;
   id?: string;
   value?: string | number;
+  href?: string;
   disabled?: boolean;
   min?: string;
   max?: string;
