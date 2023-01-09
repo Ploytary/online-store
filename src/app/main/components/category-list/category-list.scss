@@ -23,9 +23,10 @@
     display:none;
   }
 }
-.category-list-section__expand-link {
+a.category-list-section__expand-link {
   position: relative;
   color: $accent-background-color-primary;
+  font: $font-style-base-text;
   cursor: pointer;
 }
 
