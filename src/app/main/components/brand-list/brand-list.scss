@@ -29,9 +29,10 @@
     display:none;
   }
 }
-.brand-list-section__expand-link {
+a.brand-list-section__expand-link {
   position: relative;
   color: $accent-background-color-primary;
+  font: $font-style-base-text;
   cursor: pointer;
 }
 

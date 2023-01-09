@@ -17,8 +17,9 @@
   font: $font-style-section-title-normal;
 }
 
-.catalog__filter-reset-link {
-  color: $accent-background-color-primary
+a.catalog__filter-reset-link {
+  color: $accent-background-color-primary;
+  font: $font-style-base-text;
 }
 
 .catalog__filter-content > *:not(:last-child) {
