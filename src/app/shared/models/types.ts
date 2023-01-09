@@ -19,15 +19,14 @@ export type ComponentProps = {
   width?: number;
   height?: number;
   [propName: string]: string | string[] | undefined | boolean | number;
-}
-
+};
 
 export interface IFunctionable {
   addListener(eventType: keyof HTMLElementEventMap, eventListener: EventListenerOrEventListenerObject): void;
 }
 
 export interface IListable {
-  getItems(list: string[]): void
+  getItems(list: string[]): void;
 }
 
 export interface IExpandable {
