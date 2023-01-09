@@ -1,8 +1,8 @@
-import { BaseComponent } from "../../components/base-component/base-component";
+import { BaseComponent } from "../../../main/components/base-component/base-component";
 import { ComponentProps } from '../../../shared/models/types';
-import { IconLink } from "../../components/icon-link/icon-link";
-import { SiteNavigation } from "../../components/site-naviation/site-navigation";
-import { UserNavigation } from "../../components/user-navigation/user-navigation";
+import { IconLink } from "../../../main/components/icon-link/icon-link";
+import { SiteNavigation } from "../../../main/components/site-naviation/site-navigation";
+import { UserNavigation } from "../../../main/components/user-navigation/user-navigation";
 
 import './page-header.scss';
 

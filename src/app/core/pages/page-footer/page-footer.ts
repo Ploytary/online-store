@@ -1,14 +1,11 @@
-import { BaseComponent } from "../../components/base-component/base-component";
+import { BaseComponent } from "../../../main/components/base-component/base-component";
 import { ComponentProps } from "../../../shared/models/types";
-import { IconLink } from "../../components/icon-link/icon-link";
-import { Image } from "../../components/image/image";
-import { ListComponent } from "../../components/list-component/list-component";
-import { Socials } from "../../components/socials/socials";
-
-const logoImage = require('../../../../assets/logo/site-logo.svg');
+import { IconLink } from "../../../main/components/icon-link/icon-link";
+import { ListComponent } from "../../../main/components/list-component/list-component";
+import { Socials } from "../../../main/components/socials/socials";
 
 import './page-footer.scss';
-import { Link } from "../../components/link/link";
+import { Link } from "../../../main/components/link/link";
 
 export class PageFooter extends BaseComponent {
 
@@ -54,9 +51,9 @@ export class PageFooter extends BaseComponent {
     const centerColumn = new BaseComponent({tagName: 'div', classList: ['page-footer__column-center']});
     const centerColumnTitle = new BaseComponent({tagName: 'h3', classList: ['page-footer__menu-list-title'], content: 'Menu'});
     const menuList = new ListComponent({classList: ['page-footer__menu-list']});
-    ['Home', 'Shop', 'Categories'].forEach((item) => {
+    ['Home', 'Catalog', 'Cart'].forEach((item) => {
       const liComponent = new BaseComponent({tagName: 'li', classList: ['page-footer__menu-item']});
-      const linkComponent = new Link({content: item, href: item === 'Home' ? '#catalog' : '#' + item, classList: ['page-footer__menu-link']});
+      const linkComponent = new Link({content: item, href: '#' + item.toLowerCase(), classList: ['page-footer__menu-link']});
       liComponent.node.append(linkComponent.node);
       menuList.node.append(liComponent.node);
     });

@@ -8,7 +8,7 @@ export class PageNotFound extends BaseComponent {
   private subtitle: BaseComponent;
   private button: Button;
 
-  constructor(props: ComponentProps) {
+  constructor(props: ComponentProps = {}) {
     props.tagName = 'section';
     props.classList = ['section-error']
     super(props);
