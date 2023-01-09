@@ -15,6 +15,14 @@
   background: $accent-background-color-primary;
 }
 
+.button--accent:hover {
+  background-color: $accent-background-color-secondary;
+}
+
+.button--accent:active {
+  background-color: $accent-background-color-tertiary;
+}
+
 .button--pagination {
   display: flex;
   justify-content: center;
