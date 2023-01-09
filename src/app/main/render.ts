@@ -1,10 +1,12 @@
 import { PageNotFound } from './pages/page-not-found/page-not-found';
 import { Catalog } from './pages/catalog/catalog';
 import { PageHeader } from './pages/page-header/page-header';
+import { PageFooter } from './pages/page-footer/page-footer';
 
 export const renderListPloytary = [
   new PageHeader(),
   new Catalog(),
+  new PageFooter(),
 ]
 export const renderListmrdmitrij = [
   new PageNotFound({}),
