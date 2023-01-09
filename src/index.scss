@@ -1,0 +1,73 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.page-wrapper {
+  max-width: 1248px;
+  margin: 0 auto;
+}
+
+html {
+  height: 100%;
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+
+//declarated-styles///////////////////////////////////////////////////
+
+//color
+$border-color-primary: #43494D;
+$accent-background-color-primary: #1D996E;
+$accent-background-color-secondary: #14694b;
+$accent-background-color-tertiary: yellowgreen;
+$background-color-deep: #03110C;
+$background-color-primary: #333333;
+$background-color-secondary: #B8B8CC;
+$background-color-tertiary: #494949;
+$font-color-primary: #FFFFFF;
+
+// font
+$font-style-base-text: normal 16px/120% "Montserrat", sans-serif;
+$font-style-list-title: bold 18px/120% "Montserrat", sans-serif;
+$font-style-section-title-normal: bold 24px/120% "Montserrat", sans-serif;
+$font-style-section-title-big: bold 60px/120% "Montserrat", sans-serif;
+
+
+@font-face {
+  font-family: "Montserrat";
+  src: url('./assets/fonts/Montserrat-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url('./assets/fonts/Montserrat-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+.page {
+  font: $font-style-base-text;
+  color: $font-color-primary;
+  background-color: $background-color-deep;
+}

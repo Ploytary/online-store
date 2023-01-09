@@ -1,0 +1,18 @@
+@import '../../../../index.scss';
+
+.link {
+  cursor: pointer;
+  font: $font-style-list-title;
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+}
+
+.link svg {
+  flex-shrink: 0;
+  fill: $accent-background-color-primary;
+}
+
+.link:hover svg {
+  fill: $accent-background-color-secondary;
+}

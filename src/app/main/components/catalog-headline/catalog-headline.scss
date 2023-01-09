@@ -1,0 +1,18 @@
+.catalog__view-control {
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+}
+
+.catalog__headline {
+  display: flex;
+  gap: 32px;
+}
+
+.catalog__headline-input {
+  flex-grow: 1;
+}
+
+.catalog__headline-button-group {
+  display: flex;
+}

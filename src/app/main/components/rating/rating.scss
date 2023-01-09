@@ -1,0 +1,20 @@
+@import '../../../../index.scss';
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rating__star-container {
+  display: flex;
+  gap: 3px;
+}
+
+.rating__value {
+  margin: 0;
+}
+
+.rating__star {
+  fill: $accent-background-color-primary;
+}

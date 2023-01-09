@@ -1,0 +1,45 @@
+@import '../../../../index.scss';
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#check-on-tick {
+  fill: $font-color-primary;
+}
+
+.checkbox__input-icon-check-on {
+  flex-shrink: 0;
+  display: none;
+  fill: $accent-background-color-primary;
+}
+
+.checkbox__input-icon-check-off {
+  flex-shrink: 0;
+  fill: $border-color-primary;
+}
+
+.checkbox:hover {
+  & .checkbox__input-icon-check-on {
+    fill: $accent-background-color-secondary;
+  }
+  
+  & .checkbox__input-icon-check-off {
+    fill: $accent-background-color-secondary;
+  }
+}
+
+.checkbox--disabled {
+  color: fade-out($font-color-primary, 0.8);
+  pointer-events: none;
+}
+
+.checkbox__input:checked ~ .checkbox__input-icon-check-on {
+  display: inline;
+}
+
+.checkbox__input:checked ~ .checkbox__input-icon-check-off {
+  display: none;
+}

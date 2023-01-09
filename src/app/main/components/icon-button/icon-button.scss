@@ -1,0 +1,21 @@
+@import '../../../../index.scss';
+
+.icon-button {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  background-color: $background-color-primary;
+  border-style: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-button--tile{
+  background-image: url("../../../../assets/icon/tile.png");
+
+}
+
+.icon-button--list {
+  background-image: url("../../../../assets/icon/list.png");
+}

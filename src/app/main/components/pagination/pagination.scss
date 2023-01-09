@@ -1,0 +1,15 @@
+.pagination {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+
+.pagination__item--prev {
+  margin-right: 10px;
+}
+
+.pagination__item--next {
+  margin-left: 10px;
+}

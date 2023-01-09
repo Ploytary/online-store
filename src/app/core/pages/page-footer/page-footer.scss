@@ -1,0 +1,90 @@
+@import '../../../../index.scss';
+
+.page-footer__column-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.page-footer__column-center {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 20px;
+  border-left: 1px solid $accent-background-color-primary;
+}
+
+.page-footer__menu-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.page-footer__menu-list-title {
+  margin: 0;
+  font: $font-style-section-title-normal;
+}
+
+.page-footer__menu-link {
+  font: $font-style-base-text;
+}
+
+.page-footer__column-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 20px;
+  border-left: 1px solid $accent-background-color-primary;
+}
+
+.page-footer__contacts-item {
+  margin: 0;
+}
+
+
+.page-footer__autors,
+.page-footer__school {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.page-footer__school {
+  justify-self: center;
+}
+
+.page-footer__year {
+  margin: 0;
+  justify-self: end;
+}
+
+.page-footer__autors-barge,
+.page-footer__school-barge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.page-footer__bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 32px;
+  padding-top: 10px;
+  border-top: 1px solid $accent-background-color-primary;
+}
+
+.page-footer__top {
+  display: grid;
+  padding-bottom: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.page-footer {
+  padding: 20px 0;
+  background-color: $background-color-primary;
+}
