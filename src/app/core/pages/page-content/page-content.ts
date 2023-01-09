@@ -1,5 +1,5 @@
-import { BaseComponent } from "../../../main/components/base-component/base-component";
-import { ComponentProps } from "../../../shared/models/types";
+import { BaseComponent } from '../../../main/components/base-component/base-component';
+import { ComponentProps } from '../../../shared/models/types';
 
 import './page-content.scss';
 

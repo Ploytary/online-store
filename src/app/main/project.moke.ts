@@ -4,7 +4,7 @@ export async function getData() {
   console.log(data);
 }
 
-export var data = {
+export const data = {
   products: [
     {
       id: 1,
@@ -1878,7 +1878,13 @@ export const categoryList = getStringValueList(data, 'category');
 export const priceRange = getNumericValueRange(data, 'price');
 export const stockRange = getNumericValueRange(data, 'stock');
 
-function getStringValueList(dataObject: any, prop: string, capitalize = true, ascendSort = true, uniqValues = true): string[] {
+function getStringValueList(
+  dataObject: cusObj,
+  prop: string,
+  capitalize = true,
+  ascendSort = true,
+  uniqValues = true
+): string[] {
   let valueList = getList<string>(dataObject, prop);
   if (capitalize) {
     valueList = valueList.map((value) => value[0].toUpperCase() + value.slice(1).toLowerCase());
@@ -1893,7 +1899,7 @@ function getStringValueList(dataObject: any, prop: string, capitalize = true, as
   return valueList;
 }
 
-function getNumericValueRange(dataObject: any, prop: string): { minValue: number; maxValue: number } {
+function getNumericValueRange(dataObject: cusObj, prop: string): { minValue: number; maxValue: number } {
   const valueList = getList<number>(dataObject, prop);
   const ascendingSortedList = valueList.slice().sort((a, b) => a - b);
   const priceRange = {
@@ -1903,22 +1909,41 @@ function getNumericValueRange(dataObject: any, prop: string): { minValue: number
   return priceRange;
 }
 
-function getList<T>(dataObject: any, prop: string): T[] {
+type cusObj = {
+  [propVal: string]: string | number | object;
+};
+
+function getList<T>(dataObject: cusObj, prop: string): T[] {
   const propValuesArray: T[] = [];
 
   propValuesArray.push(walkGraph(dataObject, prop));
   const validValuesArray = propValuesArray.filter((item) => item !== undefined);
   return Array.from(validValuesArray);
 
-  function walkGraph(dataObject: any, prop: string): any {
-    for (let key in dataObject) {
-      if (typeof dataObject[key] !== 'object') {
-        if (prop in dataObject) {
-          return dataObject[prop];
-        }
-      } else {
-        propValuesArray.push(walkGraph(dataObject[key], prop));
+  // function walkGraph(dataObject: cusObj, prop: string): T {
+  //   for (const key in dataObject) {
+  //     if (typeof dataObject[key] !== 'object') {
+  //       if (prop in dataObject) {
+  //         const value = dataObject[prop] as T;
+  //         return value;
+  //       }
+  //     } else {
+  //       if (typeof dataObject[key] !== 'string') {
+  //         const innerProp = dataObject[key] as cusObj;
+  //         propValuesArray.push(walkGraph(innerProp, prop));
+  //       }
+  //     }
+  //   }
+  // }
+
+  function walkGraph(dataObject: cusObj, prop: string): T {
+    if (typeof dataObject === 'object') {
+      for (const key in dataObject) {
+        const innerProp = dataObject[key] as cusObj;
+        propValuesArray.push(walkGraph(innerProp, prop));
       }
     }
+    const value = dataObject[prop] as T;
+    return value;
   }
 }
